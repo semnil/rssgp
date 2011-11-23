@@ -1,0 +1,12 @@
+#コメント
+#urlとファイルパスはスペースで区切ること
+
+http://japanese.engadget.com/rss.xml out\japanese.engadget.com.txt
+http://slashdot.jp/slashdot.rdf out\slashdot.jp.txt
+http://ibm.hmx.net//atom.xml out\ibm.hmx.net.txt
+http://initial-g.jp/ out\initial-g.jp.txt
+http://www.knonline.net/d/index.rdf out\knonline.net.txt
+http://members.jcom.home.ne.jp/sarasiru/ out\sarasiru.txt
+http://morino.itigo.jp/ out\morino.itigo.jp.txt
+http://tomocha.net/diary/ out\tomocha.net.txt
+http://phantasystaruniverse.jp/psu.xml out\psu.xml.txt
