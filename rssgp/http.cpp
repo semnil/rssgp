@@ -120,7 +120,7 @@ int CHttp::get(char *trget, char *filename)
 			printf("recv : %d\n", WSAGetLastError());
 			return 1;
 		}
-		// ƒŒƒXƒ|ƒ“ƒX‚Ìˆ—
+		// ï¿½ï¿½ï¿½Xï¿½|ï¿½ï¿½ï¿½Xï¿½Ìï¿½ï¿½ï¿½
 		switch(bHead)
 		{
 		case 1:
@@ -164,11 +164,12 @@ int CHttp::get(char *trget, char *filename)
 				memcpy(tmp, &tmp[1], 2);
 				tmp[2] = buf[i];
 			}
+			break;
 		default:
 			wsp = 0;
 			break;
 		}
-		// ƒ{ƒfƒB•”‚Ì•Û‘¶
+		// ï¿½{ï¿½fï¿½Bï¿½ï¿½ï¿½Ì•Û‘ï¿½
 		fwrite(&buf[wsp], 1, n - wsp, fp);
 	}
 	fclose(fp);
