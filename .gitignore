@@ -1,0 +1,10 @@
+Backup/
+Debug/
+ipch/
+out/
+*.ilk
+*.obj
+*.opensdf
+*.pdb
+*.sdf
+*.suo
