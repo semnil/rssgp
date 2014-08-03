@@ -2,6 +2,8 @@
 #include "rssgp.h"
 #include "http.h"
 
+#include <sys/stat.h>
+
 CHttp::CHttp()
 {
 	int err;
@@ -109,6 +111,21 @@ int CHttp::get(char *trget, char *filename)
 	if(n < 0){
 		printf("send : %d\n", WSAGetLastError());
 		return 1;
+	}
+
+	memset(buf, 0, sizeof(buf));
+	strcpy(buf, filename);
+	for (int i = strlen(buf); i >= 0; i--) {
+		if (buf[i] == '\\') {
+			break;
+		}
+		buf[i] = '\0';
+	}
+
+	struct _stat st = {0};
+	_stat(buf, &st);
+	if ((st.st_mode & _S_IFDIR) == 0) {
+		CreateDirectory(buf, NULL);
 	}
 
 	memset(buf, 0, sizeof(buf));
